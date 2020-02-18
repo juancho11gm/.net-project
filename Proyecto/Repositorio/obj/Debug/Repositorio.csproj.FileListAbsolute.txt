@@ -1,0 +1,15 @@
+C:\Users\Juan Sebastián\source\repos\Proyecto\Repositorio\bin\Debug\Repositorio.dll
+C:\Users\Juan Sebastián\source\repos\Proyecto\Repositorio\bin\Debug\Repositorio.pdb
+C:\Users\Juan Sebastián\source\repos\Proyecto\Repositorio\bin\Debug\Modelos.dll
+C:\Users\Juan Sebastián\source\repos\Proyecto\Repositorio\bin\Debug\Modelos.pdb
+C:\Users\Juan Sebastián\source\repos\Proyecto\Repositorio\obj\Debug\Repositorio.csprojAssemblyReference.cache
+C:\Users\Juan Sebastián\source\repos\Proyecto\Repositorio\obj\Debug\Repositorio.csproj.CopyComplete
+C:\Users\Juan Sebastián\source\repos\Proyecto\Repositorio\obj\Debug\Repositorio.dll
+C:\Users\Juan Sebastián\source\repos\Proyecto\Repositorio\obj\Debug\Repositorio.pdb
+C:\Users\Juan Sebastián\source\repos\Proyecto\Repositorio\bin\Debug\Repositorio.dll.config
+C:\Users\Juan Sebastián\source\repos\Proyecto\Repositorio\bin\Debug\EntityFramework.dll
+C:\Users\Juan Sebastián\source\repos\Proyecto\Repositorio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Juan Sebastián\source\repos\Proyecto\Repositorio\bin\Debug\EntityFramework.xml
+C:\Users\Juan Sebastián\source\repos\Proyecto\Repositorio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Juan Sebastián\source\repos\Proyecto\Repositorio\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Juan Sebastián\source\repos\Proyecto\Repositorio\bin\Debug\es\EntityFramework.SqlServer.resources.dll

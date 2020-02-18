@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JaverianaNETModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Ciudades">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreCiudad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DepartamentoId" Type="Int32" />
+    <NavigationProperty Name="Departamentos" Relationship="Self.FK__Ciudades__Depart__4F7CD00D" FromRole="Ciudades" ToRole="Departamentos" />
+  </EntityType>
+  <EntityType Name="Departamentos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreDepartamento" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaisId" Type="Int32" />
+    <NavigationProperty Name="Ciudades" Relationship="Self.FK__Ciudades__Depart__4F7CD00D" FromRole="Departamentos" ToRole="Ciudades" />
+    <NavigationProperty Name="Paises" Relationship="Self.FK__Departame__PaisI__4CA06362" FromRole="Departamentos" ToRole="Paises" />
+  </EntityType>
+  <EntityType Name="Paises">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombrePais" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Departamentos" Relationship="Self.FK__Departame__PaisI__4CA06362" FromRole="Paises" ToRole="Departamentos" />
+  </EntityType>
+  <Association Name="FK__Ciudades__Depart__4F7CD00D">
+    <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="0..1" />
+    <End Role="Ciudades" Type="Self.Ciudades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamentos">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ciudades">
+        <PropertyRef Name="DepartamentoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Departame__PaisI__4CA06362">
+    <End Role="Paises" Type="Self.Paises" Multiplicity="0..1" />
+    <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paises">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Departamentos">
+        <PropertyRef Name="PaisId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="JaverianaNETEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ciudades" EntityType="Self.Ciudades" />
+    <EntitySet Name="Departamentos" EntityType="Self.Departamentos" />
+    <EntitySet Name="Paises" EntityType="Self.Paises" />
+    <AssociationSet Name="FK__Ciudades__Depart__4F7CD00D" Association="Self.FK__Ciudades__Depart__4F7CD00D">
+      <End Role="Departamentos" EntitySet="Departamentos" />
+      <End Role="Ciudades" EntitySet="Ciudades" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Departame__PaisI__4CA06362" Association="Self.FK__Departame__PaisI__4CA06362">
+      <End Role="Paises" EntitySet="Paises" />
+      <End Role="Departamentos" EntitySet="Departamentos" />
+    </AssociationSet>
+    <EntitySet Name="AspNetUsers" EntityType="JaverianaNETModel.AspNetUsers" />
+    <EntitySet Name="AspNetUserRoles" EntityType="JaverianaNETModel.AspNetUserRoles" />
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="JaverianaNETModel.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUserRoles" Relationship="JaverianaNETModel.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserRoles" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="RoleId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUsers" Relationship="JaverianaNETModel.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" FromRole="AspNetUserRoles" ToRole="AspNetUsers" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Type="JaverianaNETModel.AspNetUsers" Role="AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="JaverianaNETModel.AspNetUserRoles" Role="AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,5 @@
+C:\Users\Juan Sebastián\source\repos\Proyecto\Modelos\bin\Debug\Modelos.dll
+C:\Users\Juan Sebastián\source\repos\Proyecto\Modelos\bin\Debug\Modelos.pdb
+C:\Users\Juan Sebastián\source\repos\Proyecto\Modelos\obj\Debug\Modelos.dll
+C:\Users\Juan Sebastián\source\repos\Proyecto\Modelos\obj\Debug\Modelos.pdb
+C:\Users\Juan Sebastián\source\repos\Proyecto\Modelos\obj\Debug\Modelos.csprojAssemblyReference.cache

@@ -1,0 +1,23 @@
+CREATE TABLE Paises(
+	Id int PRIMARY KEY identity(1,1),
+	NombrePais NVARCHAR(MAX) NULL,
+)
+
+CREATE TABLE Departamentos(
+	Id int PRIMARY KEY identity(1,1),
+	NombreDepartamento NVARCHAR(MAX) NULL,
+	PaisId int FOREIGN KEY REFERENCES Paises(Id) ON DELETE CASCADE
+)
+
+CREATE TABLE Ciudades(
+	Id int PRIMARY KEY identity(1,1),
+	NombreCiudad NVARCHAR(MAX) NULL,
+	DepartamentoId int FOREIGN KEY REFERENCES Departamentos(Id) ON DELETE CASCADE
+)
+
+
+select * from Ciudades
+use JaverianaNET
+drop table Ciudades
+drop table Departamentos
+drop table Paises

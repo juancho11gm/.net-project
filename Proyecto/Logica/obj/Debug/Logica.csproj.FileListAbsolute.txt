@@ -1,0 +1,14 @@
+C:\Users\Juan Sebastián\source\repos\Proyecto\Logica\bin\Debug\Logica.dll
+C:\Users\Juan Sebastián\source\repos\Proyecto\Logica\bin\Debug\Logica.pdb
+C:\Users\Juan Sebastián\source\repos\Proyecto\Logica\bin\Debug\Modelos.dll
+C:\Users\Juan Sebastián\source\repos\Proyecto\Logica\bin\Debug\Repositorio.dll
+C:\Users\Juan Sebastián\source\repos\Proyecto\Logica\bin\Debug\Modelos.pdb
+C:\Users\Juan Sebastián\source\repos\Proyecto\Logica\bin\Debug\Repositorio.pdb
+C:\Users\Juan Sebastián\source\repos\Proyecto\Logica\obj\Debug\Logica.csprojAssemblyReference.cache
+C:\Users\Juan Sebastián\source\repos\Proyecto\Logica\obj\Debug\Logica.csproj.CopyComplete
+C:\Users\Juan Sebastián\source\repos\Proyecto\Logica\obj\Debug\Logica.dll
+C:\Users\Juan Sebastián\source\repos\Proyecto\Logica\obj\Debug\Logica.pdb
+C:\Users\Juan Sebastián\source\repos\Proyecto\Logica\bin\Debug\EntityFramework.dll
+C:\Users\Juan Sebastián\source\repos\Proyecto\Logica\bin\Debug\Repositorio.dll.config
+C:\Users\Juan Sebastián\source\repos\Proyecto\Logica\bin\Debug\EntityFramework.xml
+C:\Users\Juan Sebastián\source\repos\Proyecto\Logica\bin\Debug\es\EntityFramework.resources.dll
