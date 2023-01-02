@@ -1,3 +1,8 @@
 # .NET-Project
 
-Web application developed from a C # MVC project. Project built using .NET.
+Model-View-Controller project.
+
+Please read the [statement](./Proyecto_NET.pdf).
+
+## Tech Stack
+- .NET - C#
